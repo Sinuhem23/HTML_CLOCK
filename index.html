@@ -44,7 +44,10 @@
         text-decoration: underline;
         font-weight: bold;
         color: yellow;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
       }
+
       .clock .number1 {
         --rotation: 30deg;
       }
@@ -96,7 +99,7 @@
         z-index: 10;
       }
       /* For black circle */
-      /* Adding new content to the DOM  */
+      /* Adding new content to the DOM (The center dot) */
       .clock::after {
         content: '';
         position: absolute;
@@ -125,8 +128,10 @@
         height: 45%;
         background-color: red;
       }
+
       .date {
         color: yellow;
+        /* margin-left: 30%; */
         align-self: flex-end;
       }
     </style>
