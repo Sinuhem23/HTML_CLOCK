@@ -17,10 +17,20 @@ function setClock() {
 function setRotation(element, rotationRatio) {
   element.style.setProperty('--rotation', rotationRatio * 360);
 }
-// Set date mm/dd/yyyy
-const actualDate = (document.getElementById('currentDate').innerHTML =
-  new Date().toLocaleDateString());
+const checkTimeBtn = (document.getElementById('myBtn').onclick = displayDate);
 
-actualDate;
+function displayDate() {
+  // Set date mm/dd/yyyy
+  const actualDate = (document.getElementById('currentDate').innerHTML =
+    new Date().toLocaleDateString());
+  setTimeout(clearDate, 3000);
+
+  return actualDate;
+}
+function clearDate() {
+  const clear = (document.getElementById('currentDate').innerHTML = '');
+  return clear;
+}
+
 // To avoid reseting to 0deg at reload, call once reloading
 setClock();
